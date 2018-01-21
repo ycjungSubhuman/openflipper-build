@@ -49,4 +49,21 @@ docker run -v $PATH_OF_YOUR_OPENFLIPPER:/src openflipper-build:1.0
 Or you can just run `run.sh $PATH_OF_YOUR_OPENFLIPPER`
 
 
+## Adding More Dependencies
+
+You can modify Dockerfile to setup your environment. Since this image is based on arch linux, adding
+
+```
+pacman -S $PACKAGE_NAME
+```
+
+would do most of the time. Just look up on (Arch Linux Official Packages)[https://www.archlinux.org/packages/]
+
+Everytime you modify your Dockerfile, you should relaunch `di-build.sh`
+
+## Chainging Build Command
+
+You can modify build command by modifying `resources/build.sh`
+
+
 
